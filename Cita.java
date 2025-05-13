@@ -18,11 +18,13 @@ class Cita {
         return paciente;
     }
 
-    public LocalDate getFecha() {
-        return fecha;
+    public String getFecha() {
+        DateTimeFormatter formatoFecha = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        return fecha.format(formatoFecha);
     }
 
-    public LocalTime getHora() {
-        return hora;
+    public String getHora() {
+        DateTimeFormatter formatoHora = DateTimeFormatter.ofPattern("HH:mm");
+        return hora.format(formatoHora);
     }
 }
